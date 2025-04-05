@@ -16,6 +16,19 @@
                 }
             }
 
+            stage(' test') {
+                steps{
+                    echo 'running sonar test...'
+                    sh '''
+                       mvn sonar:sonar \
+                       -Dsonar.projectKey=studentapp \
+                       -Dsonar.host.url=http://13.232.234.156:9000 \
+                       -Dsonar.login=886bcf95bfb3328d030fc72d8ccb03e0091aa440
+
+                    sh '''
+                }
+            }
+
             stage ('deploy'){
                 steps{
                     echo 'deploying a war file...'
