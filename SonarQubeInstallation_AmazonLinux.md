@@ -70,3 +70,10 @@ Note -->
 
 to aceess your sonarqube use openjdk17 java instead of bellsoft if your using latest sonarqube version
 
+check /opt/sonarqube/conf/sonar.properties file is updated or not 
+if not then update following attributes
+
+sonar.jdbc.username=sonaruser
+sonar.jdbc.password=your_password
+sonar.jdbc.url=jdbc.mysql://localhost:3306/sonarqube
+sonar.web.host=0.0.0.0
